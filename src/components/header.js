@@ -1,6 +1,6 @@
 import React from "react";
 import { RiAliensFill } from 'react-icons/ri';
-import Resume from '../assets/Resume2022webDev.pdf';
+import Resume from '../assets/Resume2022-forWeb.pdf';
 
 
 const Header = () => {
@@ -11,9 +11,9 @@ const Header = () => {
             <div className="header" id="header">
 
                 <nav id="nav">
-                    <a href="#about">About</a> |
-                    <a href="#showcase">Showcase</a> |
-                    <a className="resume" target="_blank" href={Resume}>Resume</a>
+                    <a href="/#about">About</a> |
+                    <a href="/#showcase">Showcase</a> |
+                    <a className="resume" target="_blank" rel="noreferrer" href={Resume}>Resume</a>
                 </nav>
                 <div className="banner">
                     <h1>
@@ -29,7 +29,7 @@ const Header = () => {
                         <span className="letter-effect">.</span>
                     </h1>
                     <div id="intro">
-                        <text className="introText">Fullstack Developer with an emphasis on FrontEnd Development. Here to help you find the right vibe for your website. <RiAliensFill style={{ fontSize: "2rem" }} /> </text>
+                        <p className="introText">I'm a Fullstack Developer with an emphasis on FrontEnd Development. Here to help create responsive sites with the right vibe for your brand. <RiAliensFill style={{ fontSize: "2rem" }} /> </p>
                     </div>
                 </div>
             </div>
