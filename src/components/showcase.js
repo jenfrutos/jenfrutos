@@ -7,7 +7,7 @@ const Showcase = () => {
         <>
             <h2 id="showcase">Some Creations </h2>
             <div className="container showcase" >
-                <a href="https://floramocksite.netlify.app" target="_blank" rel="noreferrer">
+                {/* <a href="https://floramocksite.netlify.app" target="_blank" rel="noreferrer">
                     <Card className="showcase-card" >
                         <Card.Body>
                             <Card.Title>Flora <IoOpenOutline /></Card.Title>
@@ -15,7 +15,7 @@ const Showcase = () => {
                             <Card.Text>Mock e-commerce site for a plants. Used simple design and relevant color scheme</Card.Text>
                         </Card.Body>
                     </Card>
-                </a>
+                </a> */}
                 <a href="https://genericshop.netlify.app" target="_blank" rel="noreferrer">
                     <Card className="showcase-card" >
                         <Card.Body>
