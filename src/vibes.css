@@ -5,29 +5,6 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-
-/*HEADER contains nav and banner*/
-
-.header {
-    width: 100%;
-    font: 16px Georgia;
-
-}
-
-.bg-galaxy {
-    background-image: url(" ./images/galaxy.jpg");
-    background-position: 0% 50%;
-    background-size: 120% 100%;
-    opacity: 50%;
-    display: flex;
-    height: 100vh;
-    min-width: 100%;
-    position: absolute;
-    z-index: -10;
-    animation: galaxy-move 10s infinite;
-}
-
-
 @keyframes galaxy-move {
     0% {
         background-position: 0% 50%;
@@ -69,17 +46,41 @@ a:hover {
     color: rgb(180, 180, 180);
 }
 
+/*HEADER contains banner*/
 
-.banner {
-    margin-top: 25vh;
+.header {
+    margin-top: 20vh;
     min-height: 100vh;
+    font: 16px Georgia;
+
 }
+
+/* Moving background */
+.bg-galaxy {
+    background-image: url(" ./images/galaxy.jpg");
+    background-position: 0% 50%;
+    background-size: 120% 100%;
+    opacity: 50%;
+    display: flex;
+    height: 100vh;
+    min-width: 100%;
+    position: absolute;
+    z-index: -10;
+    animation: galaxy-move 10s infinite;
+}
+
 
 h1 {
     text-align: center;
     font: bold 4.5rem Georgia;
     color: whitesmoke;
     animation: title 2s 1;
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 3rem;
+    }
 }
 
 @keyframes title {

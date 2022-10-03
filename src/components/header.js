@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Modal from 'react-bootstrap/Modal';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import Row from 'react-bootstrap/Row';
 import { RiAliensFill } from 'react-icons/ri';
 import Resume from '../assets/Resume2022-forWeb.pdf';
 import EmailMe from "./emailForm";
@@ -39,10 +41,9 @@ const Header = () => {
                 </Container>
             </Navbar>
             <Container className="header" id="header">
-
-                <div className="banner">
-                    <div>
-                        <h1>
+                <Row className="justify-content-center">
+                    <Col xs>
+                        <h1 className="fs-sm-3">
                             <span className="letter-effect">H</span>
                             <span className="letter-effect">i</span>
                             <span className="letter-effect">,&nbsp;</span>
@@ -54,11 +55,11 @@ const Header = () => {
                             <span className="letter-effect">n</span>
                             <span className="letter-effect">.</span>
                         </h1>
-                    </div>
-                    <div id="intro">
+                    </Col>
+                    <Col xs="12" id="intro">
                         <p className="introText">I'm a Fullstack Developer with an emphasis on FrontEnd Development. Here to help create responsive sites with the right vibe for your brand. <RiAliensFill style={{ fontSize: "2rem" }} /> </p>
-                    </div>
-                </div>
+                    </Col>
+                </Row>
             </Container>
 
         </>
