@@ -6,7 +6,6 @@ import { IoSparklesSharp } from 'react-icons/io5';
 import { motion, useScroll } from "framer-motion"
 
 const About = () => {
-    const { scrollYProgress } = useScroll();
     const scrollRef = useRef(null);
 
     return (
