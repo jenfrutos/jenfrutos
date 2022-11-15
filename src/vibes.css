@@ -1,6 +1,3 @@
-:root {
-
-}
 body {
     --main-bg-color: #57594D;
     --main-text: #F2E2CE;
@@ -48,7 +45,7 @@ a:active {
 }
 
 a:hover {
-    color: var(--accent-color);
+    color: var(--hover-text);
 }
 /* EMAIL AND MODAL */
 .email-btn{
@@ -77,6 +74,7 @@ a:hover {
 .header {
     margin-top: 25vh;
     min-height: 100vh;
+    overflow: hidden;
 }
 
 h1 {
@@ -142,7 +140,20 @@ span {
 }
 .introText {
     text-align: center;
-    min-width: 50%;
+    max-width: 50%;
+    margin: auto;
+    animation: title-intro 2s 1;
+}
+@keyframes title-intro {
+    from {
+        transform: translateX(200%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0%);
+        opacity: 100;
+    }
 }
 .theme-btn{
     font-size: 2rem;
@@ -154,11 +165,13 @@ span {
     color: var(--hover-text);
     background: none;
     border: none;
+    transform: scale(1.25);
 }
 
 /* OVERLAY */
 .overlay {
     display: flex;
+    margin: 0;
     z-index: 10;
     font-size: 30px;
 }
