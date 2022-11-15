@@ -1,19 +1,42 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Modal from 'react-bootstrap/Modal';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Row from 'react-bootstrap/Row';
-import { RiAliensFill } from 'react-icons/ri';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import Button from 'react-bootstrap/Button';
 import Resume from '../assets/Resume2022-forWeb.pdf';
 import EmailMe from "./emailForm";
+import {BsSunFill, BsMoonFill} from 'react-icons/bs';
+import {RiPlantFill} from 'react-icons/ri';
+//import { motion } from "framer-motion"
 
 
 const Header = () => {
     const [show, setShow] = useState(false);
+    const [theme, setTheme] = useState(accessLocalStorage());
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+    
+    function accessLocalStorage(){
+        let storedItems = localStorage.getItem("myTheme");
+    
+        if (storedItems) {
+            return (storedItems);
+        } else { return "neutral" }
+    }
+
+    const handleThemeSwitch = (e) =>{
+        setTheme(e.currentTarget.value);
+    }
+
+    useEffect(() => {
+        localStorage.setItem("myTheme", theme);
+        document.body.className = theme;
+    }, );
+
     return (
         <>
             <div className="bg-galaxy"></div>
@@ -55,9 +78,24 @@ const Header = () => {
                             <span className="letter-effect">n</span>
                             <span className="letter-effect">.</span>
                         </h1>
-                    </Col>
-                    <Col xs="12" id="intro">
-                        <p className="introText">I'm a Fullstack Developer with an emphasis on FrontEnd Development. Here to help create responsive sites with the right vibe for your brand. <RiAliensFill style={{ fontSize: "2rem" }} /> </p>
+                        <p className="introText">I'm a Fullstack Developer with an emphasis on FrontEnd Development. Here to help create responsive sites with the right vibe for your brand. </p>
+                        <ButtonGroup aria-label="change theme">
+                            <Button 
+                                value="light"
+                                onClick={handleThemeSwitch}>
+                                    <BsSunFill/>
+                            </Button>
+                            <Button 
+                                value="neutral"
+                                onClick={handleThemeSwitch}>
+                                    <RiPlantFill/>
+                            </Button>
+                            <Button 
+                                value="dark"
+                                onClick={handleThemeSwitch}>
+                                    <BsMoonFill/>
+                            </Button>
+                        </ButtonGroup>
                     </Col>
                 </Row>
             </Container>

@@ -57,7 +57,7 @@ const EmailMe = ({ handleClose }) => {
                     </Form.Control.Feedback>
                 </Form.Group>
                 <div className="d-grid gap-2">
-                    <Button type="submit" variant="dark">{sent ? "Message Sent!" : "Send"}</Button>
+                    <Button type="submit" className="email-btn">{sent ? "Message Sent!" : "Send"}</Button>
                 </div>
             </Form>
         </>
