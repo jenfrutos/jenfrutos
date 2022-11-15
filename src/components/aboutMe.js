@@ -5,7 +5,6 @@ import Row from 'react-bootstrap/Row';
 import { IoSparklesSharp } from 'react-icons/io5';
 
 const About = () => {
-    const scrollRef = useRef(null);
 
     return (
         <Container className="about px-5" >
