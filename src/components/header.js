@@ -64,7 +64,7 @@ const Header = () => {
                 </Container>
             </Navbar>
             <Container className="header" id="header">
-                <Row className="justify-content-center">
+                <Row className="text-center">
                     <Col xs>
                         <h1 className="fs-sm-3">
                             <span className="letter-effect">H</span>
@@ -79,23 +79,27 @@ const Header = () => {
                             <span className="letter-effect">.</span>
                         </h1>
                         <p className="introText">I'm a Fullstack Developer with an emphasis on FrontEnd Development. Here to help create responsive sites with the right vibe for your brand. </p>
-                        <ButtonGroup aria-label="change theme">
+                        <ButtonGroup aria-label="change theme" >
                             <Button 
+                                className="theme-btn"
                                 value="light"
                                 onClick={handleThemeSwitch}>
                                     <BsSunFill/>
                             </Button>
                             <Button 
+                                className="theme-btn"
                                 value="neutral"
                                 onClick={handleThemeSwitch}>
                                     <RiPlantFill/>
                             </Button>
                             <Button 
+                                className="theme-btn"
                                 value="dark"
                                 onClick={handleThemeSwitch}>
                                     <BsMoonFill/>
                             </Button>
                         </ButtonGroup>
+                        <h6>Change Theme</h6>
                     </Col>
                 </Row>
             </Container>
