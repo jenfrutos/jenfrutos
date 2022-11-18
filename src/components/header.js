@@ -11,7 +11,7 @@ import Resume from '../assets/Resume2022-forWeb.pdf';
 import EmailMe from "./emailForm";
 import {BsSunFill, BsMoonFill} from 'react-icons/bs';
 import {RiPlantFill} from 'react-icons/ri';
-//import { motion } from "framer-motion"
+
 
 
 const Header = () => {
@@ -20,6 +20,7 @@ const Header = () => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     
+
     function accessLocalStorage(){
         let storedItems = localStorage.getItem("myTheme");
     
@@ -39,7 +40,6 @@ const Header = () => {
 
     return (
         <>
-            <div className="bg-galaxy"></div>
             <Modal show={show} onHide={handleClose} dialogClassName="modal-90w">
                 <Modal.Header closeButton>
                     <Modal.Title>How Can I Help You?</Modal.Title>

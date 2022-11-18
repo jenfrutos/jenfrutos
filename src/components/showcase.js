@@ -7,48 +7,48 @@ import { IoOpenOutline } from 'react-icons/io5';
 
 
 const Showcase = () => {
+    const appsArray = [
+        {
+            title: "Misc-Apps",
+            details: "React | CSS | Bootstrap",
+            description: "Collection of apps made for fun: Retro Calculator, Random Activiy Generator, To-Do list",
+            website: "https://miscapps.netlify.app"
+        },
+        {
+            title: "The Glass Shop",
+            details: "React | JavaScript | CSS | Bootstrap",
+            description: "Mock site for a small business to showcase products and potentially increase customer base.",
+            website: "https://genericshop.netlify.app"
+        }
+    ]
 
     return (
-        <Container className="showcase px-5">
-            <h2 id="showcase">Some Creations </h2>
-            <Row className="justify-content-center">
-                <Col xs="12" md="4">
-                    <a href="https://genericshop.netlify.app" target="_blank" rel="noreferrer">
-                        <Card className="showcase-card" >
-                            <Card.Body>
-                                <Card.Title>
-                                    The Glass Shop <IoOpenOutline />
-                                </Card.Title>
-                                <Card.Subtitle>
-                                    React | Bootstrap | CSS
-                                </Card.Subtitle>
-                                <Card.Text>
-                                    Mock site for a small business to showcase products and potentially increase customer base.
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-                    </a>
-                </Col>
-                <Col xs md="4">
-                    <a href="https://miscapps.netlify.app" target="_blank" rel="noreferrer">
-                        <Card className="showcase-card" >
-                            <Card.Body>
-                                <Card.Title>
-                                    Misc-Apps <IoOpenOutline />
-                                </Card.Title>
-                                <Card.Subtitle>
-                                    React | JavaScript | CSS | Bootstrap
-                                </Card.Subtitle>
-                                <Card.Text>
-                                    Collection of apps made for fun: Retro Calculator, Random Activiy Generator, To-Do list
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-                    </a>
-                </Col>
-            </Row>
-        </Container>
-
+        <section>
+            <Container className="showcase px-5" data-aos="fade-up" >
+                <h2 id="showcase">Some Creations </h2>
+                <Row className="justify-content-center">
+                    {appsArray.map(app => {return(
+                        <Col xs="12" md="4">
+                        <a href={app.website} target="_blank" rel="noreferrer">
+                            <Card className="showcase-card" >
+                                <Card.Body>
+                                    <Card.Title>
+                                        {app.title} <IoOpenOutline />
+                                    </Card.Title>
+                                    <Card.Subtitle>
+                                       {app.details}
+                                    </Card.Subtitle>
+                                    <Card.Text>
+                                        {app.description}
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                        </a>
+                    </Col>
+                    )})}
+                </Row>
+            </Container>
+        </section>
     )
 }
 

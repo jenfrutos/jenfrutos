@@ -6,7 +6,9 @@ body {
     --border-color: var(--accent-color);
     --card-bg-color: var(--main-bg-color);
     --card-text-color: var(--main-text);
+    --transition-delay: 0.5s;
 
+    transition: var(--transition-delay);
     background: var(--main-bg-color);
     color: var(--main-text);
     font:1.5rem Georgia, 'Times New Roman', Times, serif;
@@ -222,7 +224,7 @@ span {
 }
 
 .about-img {
-    max-width: 300px;
+    max-width: 250px;
     border: 3px solid var(--border-color);
     border-radius: 10px;
     mix-blend-mode: luminosity;
